@@ -53,6 +53,13 @@
             border-radius: 50%;
             background: var(--cream);
             padding: 5px;
+            object-fit: cover;
+        }
+        
+        .logo-svg {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
         }
 
         .brand-name {
@@ -262,7 +269,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 5rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image svg {
+            width: 100%;
+            height: 100%;
         }
 
         .product-info {
@@ -502,7 +515,49 @@
     <!-- Navigation -->
     <nav>
         <div class="logo-container">
-            <img src="https://via.placeholder.com/60/6B3E2E/F4E4C1?text=🍫" alt="Choco Loco" class="logo">
+            <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer brown circle -->
+                <circle cx="100" cy="100" r="95" fill="#6B3E2E"/>
+                <!-- Cream circle -->
+                <circle cx="100" cy="100" r="75" fill="#F4E4C1"/>
+                <!-- Inner brown circle -->
+                <circle cx="100" cy="100" r="65" fill="#8B5A3C"/>
+                
+                <!-- Chocolate character body -->
+                <rect x="75" y="70" width="50" height="50" rx="8" fill="#D2691E" stroke="#8B4513" stroke-width="2"/>
+                
+                <!-- Chocolate square details -->
+                <line x1="100" y1="70" x2="100" y2="120" stroke="#8B4513" stroke-width="2"/>
+                <line x1="75" y1="95" x2="125" y2="95" stroke="#8B4513" stroke-width="2"/>
+                
+                <!-- Eyes -->
+                <circle cx="90" cy="85" r="3" fill="#2C1810"/>
+                <circle cx="110" cy="85" r="3" fill="#2C1810"/>
+                <circle cx="91" cy="84" r="1.5" fill="white"/>
+                <circle cx="111" cy="84" r="1.5" fill="white"/>
+                
+                <!-- Smile -->
+                <path d="M 88 100 Q 100 108 112 100" fill="none" stroke="#2C1810" stroke-width="2" stroke-linecap="round"/>
+                
+                <!-- Left arm waving -->
+                <path d="M 70 85 L 65 75 L 62 78 L 65 80 L 60 82 L 63 85" fill="#D2691E" stroke="#8B4513" stroke-width="1.5"/>
+                
+                <!-- Right arm -->
+                <ellipse cx="128" cy="90" rx="4" ry="8" fill="#D2691E" stroke="#8B4513" stroke-width="1.5"/>
+                
+                <!-- Legs -->
+                <ellipse cx="88" cy="125" rx="6" ry="10" fill="#D2691E" stroke="#8B4513" stroke-width="1.5"/>
+                <ellipse cx="112" cy="125" rx="6" ry="10" fill="#D2691E" stroke="#8B4513" stroke-width="1.5"/>
+                
+                <!-- Sparkles -->
+                <circle cx="60" cy="60" r="2" fill="#FFD700"/>
+                <circle cx="140" cy="65" r="2" fill="#FFD700"/>
+                <circle cx="55" cy="110" r="2" fill="#FFD700"/>
+                <circle cx="145" cy="115" r="2" fill="#FFD700"/>
+                
+                <!-- Text -->
+                <text x="100" y="160" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#F4E4C1" text-anchor="middle">CHOCO LOCO</text>
+            </svg>
             <span class="brand-name">CHOCO LOCO</span>
         </div>
         <ul class="nav-links">
@@ -577,7 +632,38 @@
         <h2 class="section-title">Our Specialties</h2>
         <div class="product-grid">
             <div class="product-card">
-                <div class="product-image">🎂</div>
+                <div class="product-image">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="cakeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FFB6C1;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FF69B4;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Cake base -->
+                        <ellipse cx="200" cy="200" rx="120" ry="30" fill="#8B4513"/>
+                        <rect x="80" y="120" width="240" height="80" fill="url(#cakeGrad)"/>
+                        <ellipse cx="200" cy="120" rx="120" ry="30" fill="#FFB6C1"/>
+                        <!-- Frosting -->
+                        <path d="M 80 160 Q 110 150 140 160 T 200 160 T 260 160 T 320 160 L 320 180 L 80 180 Z" fill="#FFF"/>
+                        <!-- Top layer -->
+                        <ellipse cx="200" cy="80" rx="80" ry="20" fill="#DDA0DD"/>
+                        <rect x="120" y="80" width="160" height="40" fill="#DA70D6"/>
+                        <ellipse cx="200" cy="120" rx="80" ry="20" fill="#DDA0DD"/>
+                        <!-- Candles -->
+                        <rect x="180" y="50" width="8" height="30" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+                        <rect x="210" y="50" width="8" height="30" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+                        <!-- Flames -->
+                        <ellipse cx="184" cy="45" rx="5" ry="8" fill="#FF4500"/>
+                        <ellipse cx="214" cy="45" rx="5" ry="8" fill="#FF4500"/>
+                        <ellipse cx="184" cy="43" rx="3" ry="5" fill="#FFD700"/>
+                        <ellipse cx="214" cy="43" rx="3" ry="5" fill="#FFD700"/>
+                        <!-- Decorations -->
+                        <circle cx="150" cy="100" r="8" fill="#FF69B4"/>
+                        <circle cx="250" cy="100" r="8" fill="#FF69B4"/>
+                        <circle cx="200" cy="140" r="8" fill="#FF69B4"/>
+                    </svg>
+                </div>
                 <div class="product-info">
                     <h3>Designer Cakes</h3>
                     <p>Custom designer cakes tailored to your special occasions. Available in various flavors and designs.</p>
@@ -585,7 +671,35 @@
                 </div>
             </div>
             <div class="product-card">
-                <div class="product-image">🍫</div>
+                <div class="product-image">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="chocGrad">
+                                <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+                            </radialGradient>
+                        </defs>
+                        <!-- Chocolate bars -->
+                        <rect x="80" y="80" width="100" height="140" rx="10" fill="url(#chocGrad)" stroke="#3D2817" stroke-width="3"/>
+                        <rect x="220" y="80" width="100" height="140" rx="10" fill="url(#chocGrad)" stroke="#3D2817" stroke-width="3"/>
+                        <!-- Grid lines -->
+                        <line x1="80" y1="115" x2="180" y2="115" stroke="#3D2817" stroke-width="2"/>
+                        <line x1="80" y1="150" x2="180" y2="150" stroke="#3D2817" stroke-width="2"/>
+                        <line x1="80" y1="185" x2="180" y2="185" stroke="#3D2817" stroke-width="2"/>
+                        <line x1="130" y1="80" x2="130" y2="220" stroke="#3D2817" stroke-width="2"/>
+                        <line x1="220" y1="115" x2="320" y2="115" stroke="#3D2817" stroke-width="2"/>
+                        <line x1="220" y1="150" x2="320" y2="150" stroke="#3D2817" stroke-width="2"/>
+                        <line x1="220" y1="185" x2="320" y2="185" stroke="#3D2817" stroke-width="2"/>
+                        <line x1="270" y1="80" x2="270" y2="220" stroke="#3D2817" stroke-width="2"/>
+                        <!-- Melting chocolate drips -->
+                        <path d="M 130 220 Q 130 240 125 250 Q 120 255 130 260" fill="#8B4513"/>
+                        <path d="M 270 220 Q 270 240 275 250 Q 280 255 270 260" fill="#8B4513"/>
+                        <!-- Sparkles -->
+                        <circle cx="190" cy="120" r="4" fill="#FFD700" opacity="0.8"/>
+                        <circle cx="210" cy="170" r="3" fill="#FFD700" opacity="0.8"/>
+                        <circle cx="200" cy="100" r="3" fill="#FFF" opacity="0.6"/>
+                    </svg>
+                </div>
                 <div class="product-info">
                     <h3>Homemade Chocolates</h3>
                     <p>Rich, creamy chocolates made with premium ingredients. Perfect for chocolate lovers!</p>
@@ -593,7 +707,32 @@
                 </div>
             </div>
             <div class="product-card">
-                <div class="product-image">🧁</div>
+                <div class="product-image">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Cupcake wrapper -->
+                        <path d="M 150 200 L 130 260 L 270 260 L 250 200 Z" fill="#FF1493" stroke="#C71585" stroke-width="2"/>
+                        <path d="M 140 220 L 260 220" stroke="#C71585" stroke-width="1"/>
+                        <path d="M 145 230 L 255 230" stroke="#C71585" stroke-width="1"/>
+                        <path d="M 148 240 L 252 240" stroke="#C71585" stroke-width="1"/>
+                        <path d="M 151 250 L 249 250" stroke="#C71585" stroke-width="1"/>
+                        <!-- Frosting -->
+                        <ellipse cx="200" cy="200" rx="55" ry="20" fill="#FFF0F5"/>
+                        <circle cx="200" cy="180" r="40" fill="#FFB6C1"/>
+                        <circle cx="170" cy="160" r="35" fill="#FFC0CB"/>
+                        <circle cx="230" cy="160" r="35" fill="#FFC0CB"/>
+                        <circle cx="200" cy="140" r="38" fill="#FFD1DC"/>
+                        <circle cx="175" cy="135" r="30" fill="#FFE4E1"/>
+                        <circle cx="225" cy="135" r="30" fill="#FFE4E1"/>
+                        <!-- Cherry on top -->
+                        <circle cx="200" cy="115" r="12" fill="#DC143C"/>
+                        <path d="M 200 115 Q 195 100 190 95" stroke="#228B22" stroke-width="2" fill="none"/>
+                        <!-- Sprinkles -->
+                        <rect x="185" y="150" width="3" height="12" fill="#FF69B4" transform="rotate(20 186 156)"/>
+                        <rect x="210" y="155" width="3" height="12" fill="#4169E1" transform="rotate(-15 211 161)"/>
+                        <rect x="195" y="170" width="3" height="12" fill="#FFD700" transform="rotate(45 196 176)"/>
+                        <rect x="220" y="165" width="3" height="12" fill="#32CD32" transform="rotate(-30 221 171)"/>
+                    </svg>
+                </div>
                 <div class="product-info">
                     <h3>Dry Cakes</h3>
                     <p>Delicious dry cakes perfect for tea time. Long-lasting freshness guaranteed.</p>
@@ -601,7 +740,32 @@
                 </div>
             </div>
             <div class="product-card">
-                <div class="product-image">🎁</div>
+                <div class="product-image">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Gift box -->
+                        <rect x="120" y="140" width="160" height="120" fill="#8B0000" stroke="#660000" stroke-width="3"/>
+                        <rect x="120" y="140" width="160" height="30" fill="#A52A2A"/>
+                        <!-- Ribbon vertical -->
+                        <rect x="185" y="140" width="30" height="120" fill="#FFD700"/>
+                        <!-- Ribbon horizontal -->
+                        <rect x="120" y="185" width="160" height="30" fill="#FFD700"/>
+                        <!-- Bow -->
+                        <ellipse cx="170" cy="130" rx="35" ry="20" fill="#FFD700" stroke="#FFA500" stroke-width="2"/>
+                        <ellipse cx="230" cy="130" rx="35" ry="20" fill="#FFD700" stroke="#FFA500" stroke-width="2"/>
+                        <circle cx="200" cy="130" r="15" fill="#FFD700" stroke="#FFA500" stroke-width="2"/>
+                        <path d="M 185 125 L 200 110 L 215 125" fill="#FFA500"/>
+                        <!-- Decorative elements around -->
+                        <circle cx="90" cy="160" r="10" fill="#FF69B4"/>
+                        <circle cx="310" cy="160" r="10" fill="#4169E1"/>
+                        <circle cx="95" cy="220" r="8" fill="#32CD32"/>
+                        <circle cx="305" cy="220" r="8" fill="#FF1493"/>
+                        <!-- Hearts -->
+                        <path d="M 85 190 Q 80 185 85 180 Q 90 175 95 180 Q 100 185 95 190 L 85 195 Z" fill="#FF69B4"/>
+                        <path d="M 305 195 Q 300 190 305 185 Q 310 180 315 185 Q 320 190 315 195 L 305 200 Z" fill="#FF1493"/>
+                        <!-- Stars -->
+                        <path d="M 200 80 L 205 95 L 220 95 L 210 105 L 215 120 L 200 110 L 185 120 L 190 105 L 180 95 L 195 95 Z" fill="#FFD700"/>
+                    </svg>
+                </div>
                 <div class="product-info">
                     <h3>Gift Hampers</h3>
                     <p>Beautifully curated hampers with chocolates, cakes, and treats for your loved ones.</p>
@@ -609,7 +773,39 @@
                 </div>
             </div>
             <div class="product-card">
-                <div class="product-image">🍰</div>
+                <div class="product-image">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#4682B4;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Bottom tier -->
+                        <ellipse cx="200" cy="230" rx="140" ry="35" fill="#654321"/>
+                        <rect x="60" y="180" width="280" height="50" fill="url(#blueGrad)"/>
+                        <ellipse cx="200" cy="180" rx="140" ry="35" fill="#87CEEB"/>
+                        <!-- Middle tier -->
+                        <ellipse cx="200" cy="155" rx="100" ry="25" fill="#8B4513"/>
+                        <rect x="100" y="115" width="200" height="40" fill="#FFB6C1"/>
+                        <ellipse cx="200" cy="115" rx="100" ry="25" fill="#FFC0CB"/>
+                        <!-- Top tier -->
+                        <ellipse cx="200" cy="95" rx="60" ry="15" fill="#654321"/>
+                        <rect x="140" y="65" width="120" height="30" fill="#FFFACD"/>
+                        <ellipse cx="200" cy="65" rx="60" ry="15" fill="#FFF8DC"/>
+                        <!-- Decorations -->
+                        <circle cx="200" cy="50" r="10" fill="#FF1493"/>
+                        <circle cx="185" cy="55" r="6" fill="#FF69B4"/>
+                        <circle cx="215" cy="55" r="6" fill="#FF69B4"/>
+                        <!-- Tier decorations -->
+                        <circle cx="140" cy="125" r="8" fill="#FFF"/>
+                        <circle cx="180" cy="125" r="8" fill="#FFF"/>
+                        <circle cx="220" cy="125" r="8" fill="#FFF"/>
+                        <circle cx="260" cy="125" r="8" fill="#FFF"/>
+                        <path d="M 80 190 L 85 195 L 80 200 L 75 195 Z" fill="#FFD700"/>
+                        <path d="M 320 190 L 325 195 L 320 200 L 315 195 Z" fill="#FFD700"/>
+                    </svg>
+                </div>
                 <div class="product-info">
                     <h3>Theme Cakes</h3>
                     <p>Customized theme cakes for birthdays, anniversaries, and special celebrations.</p>
@@ -617,7 +813,37 @@
                 </div>
             </div>
             <div class="product-card">
-                <div class="product-image">🍪</div>
+                <div class="product-image">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Cookies -->
+                        <circle cx="150" cy="120" r="50" fill="#D2691E" stroke="#8B4513" stroke-width="3"/>
+                        <circle cx="250" cy="180" r="50" fill="#CD853F" stroke="#8B4513" stroke-width="3"/>
+                        <circle cx="200" cy="150" r="55" fill="#DEB887" stroke="#8B4513" stroke-width="3"/>
+                        <!-- Chocolate chips on first cookie -->
+                        <circle cx="135" cy="110" r="6" fill="#3D2817"/>
+                        <circle cx="155" cy="105" r="5" fill="#3D2817"/>
+                        <circle cx="160" cy="125" r="6" fill="#3D2817"/>
+                        <circle cx="140" cy="130" r="5" fill="#3D2817"/>
+                        <circle cx="150" cy="135" r="5" fill="#3D2817"/>
+                        <!-- Chocolate chips on second cookie -->
+                        <circle cx="240" cy="165" r="6" fill="#3D2817"/>
+                        <circle cx="265" cy="170" r="5" fill="#3D2817"/>
+                        <circle cx="255" cy="190" r="6" fill="#3D2817"/>
+                        <circle cx="235" cy="185" r="5" fill="#3D2817"/>
+                        <!-- Chocolate chips on third cookie -->
+                        <circle cx="185" cy="140" r="6" fill="#3D2817"/>
+                        <circle cx="210" cy="135" r="6" fill="#3D2817"/>
+                        <circle cx="195" cy="155" r="5" fill="#3D2817"/>
+                        <circle cx="215" cy="160" r="6" fill="#3D2817"/>
+                        <circle cx="190" cy="165" r="5" fill="#3D2817"/>
+                        <circle cx="205" cy="145" r="5" fill="#3D2817"/>
+                        <!-- Crumbs -->
+                        <circle cx="120" cy="170" r="3" fill="#DEB887"/>
+                        <circle cx="280" cy="140" r="3" fill="#D2691E"/>
+                        <circle cx="130" cy="180" r="2" fill="#CD853F"/>
+                        <circle cx="270" cy="130" r="2" fill="#DEB887"/>
+                    </svg>
+                </div>
                 <div class="product-info">
                     <h3>Cookies & More</h3>
                     <p>Freshly baked cookies and assorted treats. Perfect for gifting or enjoying yourself!</p>
